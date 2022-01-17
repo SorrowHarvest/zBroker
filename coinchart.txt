@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head><title>Real-time price data - CryptoCurrencyChart</title><link rel="icon" href="https://www.cryptocurrencychart.com/images/logo-small.png">
+		<meta name="keywords" content="Crypto currency, download, historical data, compare, crypto compare, crypto charts, crypto graphs, crypto price, live prices, cryptocurrency price chart, compare cryptocurrency charts, cryptocurrency graphs, cryptocurrency charts, USD, dollar, euro, Bitcoin, BTC, Ethereum, ETH, Binance Coin, BNB2, Tether, USDT, Solana, SOL6, Cardano, ADA, USD Coin, USDC, XRP, XRP, Terra, LUNA2, Polkadot, DOT2">
+		<meta property="og:title" content="Real-time price data - CryptoCurrencyChart">
+		<meta name="description" content="Chart and download live crypto currency data like price, market capitalization, supply and trade volume. View in US dollars, euros, pound sterling and many other fiat currencies. You can view growth and cumulative growth for a date range. Historical data since 2009.">
+		<meta property="og:description" content="Chart and download live crypto currency data like price, market capitalization, supply and trade volume. View in US dollars, euros, pound sterling and many other fiat currencies. You can view growth and cumulative growth for a date range. Historical data since 2009.">
+		<meta property="og:image" content="https://www.cryptocurrencychart.com/images/logo-medium.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="og:url" content="https://www.cryptocurrencychart.com/live-prices/BTC%2CETH%2CBNB2%2CUSDT%2CSOL6%2CADA%2CUSDC%2CXRP%2CLUNA2%2CDOT2">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#222">
+		<link rel="icon" sizes="192x192" href="/images/logo-small.png">
+		<meta name="apple-mobile-web-app-title" content="CryptoCurrencyChart" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/images/logo-small.png">
+		<meta name="msapplication-TileColor" content="#222" />
+		<meta name="msapplication-TileImage" content="/images/logo-small.png" />
+		<link rel="manifest" href="/manifest.json">
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="CryptoCurrencyChart" />
+		<meta name="application-name" content="CryptoCurrencyChart">
+		<link rel="stylesheet" media="all" href="https://www.cryptocurrencychart.com/merged/style-2021-11-30-09-15-53.css">
+	</head>
+	<body>
+	<div id="theme-switcher">
+	<a href="#light" id="light-theme-button"><span class="fa icon-sun"></span></a><a href="#dark" id="dark-theme-button"><span class="fa icon-moon"></span></a>
+</div><script>
+let theme = window.localStorage.getItem('theme');
+if (theme === 'light' || (!theme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+	document.documentElement.classList.add('light');
+	document.getElementById('light-theme-button').classList.add('active');
+} else {
+	document.getElementById('dark-theme-button').classList.add('active');
+}
+</script><header class="main-width">
+				<a href="https://www.cryptocurrencychart.com/" title="CryptoCurrencyChart.Com" id="logo"></a>
+			</header><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":"1","name":"Coins","item":"https:\/\/www.cryptocurrencychart.com"},{"@type":"ListItem","position":"2","name":"Live","item":"https:\/\/www.cryptocurrencychart.com\/top-live-coins\/10"}]}</script><nav class="menu main-width"><div class="main-menu"><a href="#toggle-menu" class="menu-toggle"></a><a href="https://www.cryptocurrencychart.com/">List</a>			
+<a href="https://www.cryptocurrencychart.com/top-live-coins/10" class="selected">Live</a>			
+<a href="https://www.cryptocurrencychart.com/top/25">Top charts</a>			
+<a href="https://www.cryptocurrencychart.com/chart" class="my-charts">My charts</a>			
+<a href="https://www.cryptocurrencychart.com/top-return-on-investment/week">Returns</a>			
+<a href="https://www.cryptocurrencychart.com/subscription/login">Account</a>			
+<a href="https://www.cryptocurrencychart.com/api/documentation">API</a>			
+<a href="https://www.cryptocurrencychart.com/frequently-asked-questions">Support</a><div id="coin-search-container"><input type="text" value="" placeholder="Search..." /><div class="search-result hidden"></div></div></div>
+<div class='sub-menu'>
+		<a href='https://www.cryptocurrencychart.com/top-live-coins/10'>Top 10</a>
+		<a href='https://www.cryptocurrencychart.com/top-live-coins/20'>Top 20</a>
+		<a href='https://www.cryptocurrencychart.com/top-live-coins/30'>Top 30</a>
+<div class="clear"></div>
+</div>
+<div class="clear"></div></nav><div id="content" class="main-width"><div class="advertisement"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CryptoCurrencyChart Responsive Top -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7290183389342960"
+     data-ad-slot="9151799322"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div id="compact-coin-list-controls"><div id="coin-select"><label id="coin-search-label"><span title="Add a coin to the live-price and value list.">Add a coin</span><input type="text" id="coin-search" placeholder="Type name or code" /><div id="result-container" class="hidden"></div></label><a href="#" id="remove-all">Remove all</a><br /></div><div class="display-option-container">
+				<label>
+					Display
+					<select id="real-time-display-options">
+						<option value="ratio-and-coins">Price, value and ratio</option>
+						<option value="">Price and value</option>
+						<option value="ratio">Price and ratio</option>
+						<option value="price">Price</option>
+					</select>
+				</label>
+			</div><div class="currency-switcher">
+				<select class="currency-select"><option value="USD">USD - US Dollar</option>
+<option value="EUR">EUR - Euro</option>
+<option value="AUD">AUD - Australian Dollar</option>
+<option value="BGN">BGN - Bulgarian Lev</option>
+<option value="BRL">BRL - Brazil Real</option>
+<option value="CAD">CAD - Canadian Dollar</option>
+<option value="CHF">CHF - Swiss Franc</option>
+<option value="CNY">CNY - Renminbi</option>
+<option value="CZK">CZK - Czech Koruna</option>
+<option value="DKK">DKK - Danish Krone</option>
+<option value="GBP">GBP - British Pound</option>
+<option value="HKD">HKD - Hong Kong Dollar</option>
+<option value="HRK">HRK - Croatian Kuna</option>
+<option value="HUF">HUF - Hungarian Forint</option>
+<option value="IDR">IDR - Indonesian Rupiah</option>
+<option value="ILS">ILS - Israeli Shekel</option>
+<option value="ISK">ISK - Icelandic króna</option>
+<option value="INR">INR - Indian Rupee</option>
+<option value="JPY">JPY - Japanese Yen</option>
+<option value="KRW">KRW - South Korean Won</option>
+<option value="MXN">MXN - Mexican Peso</option>
+<option value="MYR">MYR - Malaysian Ringgit</option>
+<option value="NOK">NOK - Norwegian Krone</option>
+<option value="NZD">NZD - New Zealand Dollar</option>
+<option value="PHP">PHP - Philippine Peso</option>
+<option value="PLN">PLN - Polish Zloty</option>
+<option value="RON">RON - Romanian Leu</option>
+<option value="RUB">RUB - Russian Ruble</option>
+<option value="SEK">SEK - Swedish Krona</option>
+<option value="SGD">SGD - Singapore Dollar</option>
+<option value="THB">THB - Thai Baht</option>
+<option value="TRY">TRY - Turkish Lira</option>
+<option value="ZAR">ZAR - South African Rand</option>
+<option value="AED">AED - United Arab Emirates Dirham</option>
+<option value="AFN">AFN - Afghan Afghani</option>
+<option value="ALL">ALL - Albanian Lek</option>
+<option value="AMD">AMD - Armenian Dram</option>
+<option value="ANG">ANG - Netherlands Antillean Guilder</option>
+<option value="AOA">AOA - Angolan Kwanza</option>
+<option value="ARS">ARS - Argentine Peso</option>
+<option value="AWG">AWG - Aruban Florin</option>
+<option value="AZN">AZN - Azerbaijani Manat</option>
+<option value="BAM">BAM - Bosnia-Herzegovina Convertible Mark</option>
+<option value="BBD">BBD - Barbadian Dollar</option>
+<option value="BDT">BDT - Bangladeshi Taka</option>
+<option value="BHD">BHD - Bahraini Dinar</option>
+<option value="BIF">BIF - Burundian Franc</option>
+<option value="BMD">BMD - Bermudan Dollar</option>
+<option value="BND">BND - Brunei Dollar</option>
+<option value="BOB">BOB - Bolivian Boliviano</option>
+<option value="BSD">BSD - Bahamian Dollar</option>
+<option value="BTC">BTC - Bitcoin</option>
+<option value="BTN">BTN - Bhutanese Ngultrum</option>
+<option value="BWP">BWP - Botswanan Pula</option>
+<option value="BYN">BYN - New Belarusian Ruble</option>
+<option value="BYR">BYR - Belarusian Ruble</option>
+<option value="BZD">BZD - Belize Dollar</option>
+<option value="CDF">CDF - Congolese Franc</option>
+<option value="CLF">CLF - Chilean Unit of Account (UF)</option>
+<option value="CLP">CLP - Chilean Peso</option>
+<option value="COP">COP - Colombian Peso</option>
+<option value="CRC">CRC - Costa Rican Colón</option>
+<option value="CUC">CUC - Cuban Convertible Peso</option>
+<option value="CUP">CUP - Cuban Peso</option>
+<option value="CVE">CVE - Cape Verdean Escudo</option>
+<option value="DJF">DJF - Djiboutian Franc</option>
+<option value="DOP">DOP - Dominican Peso</option>
+<option value="DZD">DZD - Algerian Dinar</option>
+<option value="EGP">EGP - Egyptian Pound</option>
+<option value="ERN">ERN - Eritrean Nakfa</option>
+<option value="ETB">ETB - Ethiopian Birr</option>
+<option value="FJD">FJD - Fijian Dollar</option>
+<option value="FKP">FKP - Falkland Islands Pound</option>
+<option value="GEL">GEL - Georgian Lari</option>
+<option value="GGP">GGP - Guernsey Pound</option>
+<option value="GHS">GHS - Ghanaian Cedi</option>
+<option value="GIP">GIP - Gibraltar Pound</option>
+<option value="GMD">GMD - Gambian Dalasi</option>
+<option value="GNF">GNF - Guinean Franc</option>
+<option value="GTQ">GTQ - Guatemalan Quetzal</option>
+<option value="GYD">GYD - Guyanaese Dollar</option>
+<option value="HNL">HNL - Honduran Lempira</option>
+<option value="HTG">HTG - Haitian Gourde</option>
+<option value="IMP">IMP - Manx pound</option>
+<option value="IQD">IQD - Iraqi Dinar</option>
+<option value="IRR">IRR - Iranian Rial</option>
+<option value="JEP">JEP - Jersey Pound</option>
+<option value="JMD">JMD - Jamaican Dollar</option>
+<option value="JOD">JOD - Jordanian Dinar</option>
+<option value="KES">KES - Kenyan Shilling</option>
+<option value="KGS">KGS - Kyrgystani Som</option>
+<option value="KHR">KHR - Cambodian Riel</option>
+<option value="KMF">KMF - Comorian Franc</option>
+<option value="KPW">KPW - North Korean Won</option>
+<option value="KWD">KWD - Kuwaiti Dinar</option>
+<option value="KYD">KYD - Cayman Islands Dollar</option>
+<option value="KZT">KZT - Kazakhstani Tenge</option>
+<option value="LAK">LAK - Laotian Kip</option>
+<option value="LBP">LBP - Lebanese Pound</option>
+<option value="LKR">LKR - Sri Lankan Rupee</option>
+<option value="LRD">LRD - Liberian Dollar</option>
+<option value="LSL">LSL - Lesotho Loti</option>
+<option value="LTL">LTL - Lithuanian Litas</option>
+<option value="LVL">LVL - Latvian Lats</option>
+<option value="LYD">LYD - Libyan Dinar</option>
+<option value="MAD">MAD - Moroccan Dirham</option>
+<option value="MDL">MDL - Moldovan Leu</option>
+<option value="MGA">MGA - Malagasy Ariary</option>
+<option value="MKD">MKD - Macedonian Denar</option>
+<option value="MMK">MMK - Myanma Kyat</option>
+<option value="MNT">MNT - Mongolian Tugrik</option>
+<option value="MOP">MOP - Macanese Pataca</option>
+<option value="MRO">MRO - Mauritanian Ouguiya</option>
+<option value="MUR">MUR - Mauritian Rupee</option>
+<option value="MVR">MVR - Maldivian Rufiyaa</option>
+<option value="MWK">MWK - Malawian Kwacha</option>
+<option value="MZN">MZN - Mozambican Metical</option>
+<option value="NAD">NAD - Namibian Dollar</option>
+<option value="NGN">NGN - Nigerian Naira</option>
+<option value="NIO">NIO - Nicaraguan Córdoba</option>
+<option value="NPR">NPR - Nepalese Rupee</option>
+<option value="OMR">OMR - Omani Rial</option>
+<option value="PAB">PAB - Panamanian Balboa</option>
+<option value="PEN">PEN - Peruvian Nuevo Sol</option>
+<option value="PGK">PGK - Papua New Guinean Kina</option>
+<option value="PKR">PKR - Pakistani Rupee</option>
+<option value="PYG">PYG - Paraguayan Guarani</option>
+<option value="QAR">QAR - Qatari Rial</option>
+<option value="RSD">RSD - Serbian Dinar</option>
+<option value="RWF">RWF - Rwandan Franc</option>
+<option value="SAR">SAR - Saudi Riyal</option>
+<option value="SBD">SBD - Solomon Islands Dollar</option>
+<option value="SCR">SCR - Seychellois Rupee</option>
+<option value="SDG">SDG - Sudanese Pound</option>
+<option value="SHP">SHP - Saint Helena Pound</option>
+<option value="SLL">SLL - Sierra Leonean Leone</option>
+<option value="SOS">SOS - Somali Shilling</option>
+<option value="SRD">SRD - Surinamese Dollar</option>
+<option value="STD">STD - São Tomé and Príncipe dobra</option>
+<option value="SVC">SVC - Salvadoran Colón</option>
+<option value="SYP">SYP - Syrian Pound</option>
+<option value="SZL">SZL - Swazi Lilangeni</option>
+<option value="TJS">TJS - Tajikistani Somoni</option>
+<option value="TMT">TMT - Turkmenistani Manat</option>
+<option value="TND">TND - Tunisian Dinar</option>
+<option value="TOP">TOP - Tongan Pa?anga</option>
+<option value="TTD">TTD - Trinidad and Tobago Dollar</option>
+<option value="TWD">TWD - New Taiwan Dollar</option>
+<option value="TZS">TZS - Tanzanian Shilling</option>
+<option value="UAH">UAH - Ukrainian Hryvnia</option>
+<option value="UGX">UGX - Ugandan Shilling</option>
+<option value="UYU">UYU - Uruguayan Peso</option>
+<option value="UZS">UZS - Uzbekistan Som</option>
+<option value="VEF">VEF - Venezuelan Bolívar Fuerte</option>
+<option value="VND">VND - Vietnamese Dong</option>
+<option value="VUV">VUV - Vanuatu Vatu</option>
+<option value="WST">WST - Samoan Tala</option>
+<option value="XAF">XAF - CFA Franc BEAC</option>
+<option value="XAG">XAG - Silver (troy ounce)</option>
+<option value="XAU">XAU - Gold (troy ounce)</option>
+<option value="XCD">XCD - East Caribbean Dollar</option>
+<option value="XDR">XDR - Special Drawing Rights</option>
+<option value="XOF">XOF - CFA Franc BCEAO</option>
+<option value="XPF">XPF - CFP Franc</option>
+<option value="YER">YER - Yemeni Rial</option>
+<option value="ZMK">ZMK - Zambian Kwacha (pre-2013)</option>
+<option value="ZMW">ZMW - Zambian Kwacha</option>
+<option value="ZWL">ZWL - Zimbabwean Dollar</option></select>
+			</div><div class="clear"></div></div><a href="https://www.cryptocurrencychart.com/past-prices/BTC%2CETH%2CBNB2%2CUSDT%2CSOL6%2CADA%2CUSDC%2CXRP%2CLUNA2%2CDOT2" class="button">Yesterday</a><div class="compact-list">
+			<div data-id="363" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">Bitcoin <span class="symbol">(BTC)</span></span>
+				<span class="price currency" data-value="47098.629094407" title="Current coin price"></span><span class="change" data-change="-0.0045471128184271" title="Price change %">-0.45%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-BTC" data-value="0" data-price="47098.629094407" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="364" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">Ethereum <span class="symbol">(ETH)</span></span>
+				<span class="price currency" data-value="3815.8041965359" title="Current coin price"></span><span class="change" data-change="-0.0020687903087512" title="Price change %">-0.21%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-ETH" data-value="0" data-price="3815.8041965359" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="2471" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">Binance Coin <span class="symbol">(BNB)</span></span>
+				<span class="price currency" data-value="526.89967258547" title="Current coin price"></span><span class="change" data-change="-0.0072072315427306" title="Price change %">-0.72%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-BNB2" data-value="0" data-price="526.89967258547" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="390" class="coin coin-block block-green">
+				<a href="#remove" class="close"></a>
+				<span class="title">Tether <span class="symbol">(USDT)</span></span>
+				<span class="price currency" data-value="0.99907892088321" title="Current coin price"></span><span class="change" data-change="0.00046710908232717" title="Price change %">+0.05%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-USDT" data-value="0" data-price="0.99907892088321" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="5789" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">Solana <span class="symbol">(SOL)</span></span>
+				<span class="price currency" data-value="173.47184883265" title="Current coin price"></span><span class="change" data-change="-0.014819088869172" title="Price change %">-1.48%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-SOL6" data-value="0" data-price="173.47184883265" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="2796" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">Cardano <span class="symbol">(ADA)</span></span>
+				<span class="price currency" data-value="1.3597858404935" title="Current coin price"></span><span class="change" data-change="-0.014723962115925" title="Price change %">-1.47%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-ADA" data-value="0" data-price="1.3597858404935" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="4291" class="coin coin-block block-green">
+				<a href="#remove" class="close"></a>
+				<span class="title">USD Coin <span class="symbol">(USDC)</span></span>
+				<span class="price currency" data-value="0.99973572561253" title="Current coin price"></span><span class="change" data-change="0.00034607678720766" title="Price change %">+0.03%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-USDC" data-value="0" data-price="0.99973572561253" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="365" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">XRP <span class="symbol">(XRP)</span></span>
+				<span class="price currency" data-value="0.84007262230168" title="Current coin price"></span><span class="change" data-change="-0.037652405568573" title="Price change %">-3.77%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-XRP" data-value="0" data-price="0.84007262230168" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="5693" class="coin coin-block block-green">
+				<a href="#remove" class="close"></a>
+				<span class="title">Terra <span class="symbol">(LUNA)</span></span>
+				<span class="price currency" data-value="91.298020814038" title="Current coin price"></span><span class="change" data-change="0.028047378238863" title="Price change %">+2.80%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-LUNA2" data-value="0" data-price="91.298020814038" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+<div data-id="5154" class="coin coin-block block-red">
+				<a href="#remove" class="close"></a>
+				<span class="title">Polkadot <span class="symbol">(DOT)</span></span>
+				<span class="price currency" data-value="29.133723834871" title="Current coin price"></span><span class="change" data-change="-0.023821608432911" title="Price change %">-2.38%</span><br class="break-1" />
+				<span class="my-value-container">
+					<input class="my-coin-input data-price" type="text" id="my-coin-DOT2" data-value="0" data-price="29.133723834871" value="0" /><span class="my-value" title="The value of the coins in the selected fiat currency"></span><span class="my-change" title="The change in value of the coins in the selected fiat currency"></span>
+				</span><br class="break-2" />
+				<span class="hidden ratio-description">% of total</span><span class="hidden ratio"></span>
+			</div>
+			<div class="clear"></div>
+			<div class="coin-block coin-block-total">
+				<span class="title">Coin total</span>
+				<span class="change" id="total-change-percentage" title="Total value change %"></span><br/>
+				<span class="my-value-container">
+					<span id="total-amount" title="The total value of the coins in the selected fiat currency"></span><span id="total-change-amount" title="The total change in value of the coins in the selected fiat currency"></span>
+				</span>
+			</div>
+			<div class="clear"></div>
+		</div><div class="advertisement"><!-- CryptoCurrencyChart Responsive Content -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7290183389342960"
+     data-ad-slot="1628532522"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div class="pie-chart" id="ratio-pie-chart"></div><div class="chart-link-container"><a href="" class="button" id="compact-chart-link">Yearly performance</a></div><div id="account-information">
+					<h3>Login for more up to date prices</h3>
+					<p><a href="https://www.cryptocurrencychart.com/subscription/login/https%3A%2F%2Fwww.cryptocurrencychart.com%2Flive-prices%2FBTC%252CETH%252CBNB2%252CUSDT%252CSOL6%252CADA%252CUSDC%252CXRP%252CLUNA2%252CDOT2" class="button" title="Login with existing account">Login</a> or <a href="https://www.cryptocurrencychart.com/subscription/signup" class="button" title="Register a new account">register</a> to get more up to date prices.</p>
+				</div><p>The prices on this page are updated automatically, you don't have to refresh.</p><p>Coin amounts are only ever stored in the browser and used for local calculations.</p><nav class="footer-menu"><a href="https://www.cryptocurrencychart.com/">List</a>			
+<a href="https://www.cryptocurrencychart.com/top-live-coins/10">Live</a>			
+<a href="https://www.cryptocurrencychart.com/top/25">Top charts</a>			
+<a href="https://www.cryptocurrencychart.com/chart">My charts</a>			
+<a href="https://www.cryptocurrencychart.com/top-return-on-investment/week">Returns</a>			
+<a href="https://www.cryptocurrencychart.com/subscription/login">Account</a>			
+<a href="https://www.cryptocurrencychart.com/api/documentation">API</a>			
+<a href="https://www.cryptocurrencychart.com/frequently-asked-questions">Support</a></nav></div> <!-- close content --><footer id="footer" class="main-width">
+			<span class="terms-of-service"><a href="/documents/CryptoCurrencyChart-TermsAndConditions.pdf">Terms &amp; Conditions</a></span>
+			<span class="privacy-policy"><a href="/documents/CryptoCurrencyChart-PrivacyPolicy.pdf">Privacy Policy</a></span>
+			<span class="copyright">&copy; 2013-2022 CryptoCurrencyChart B.V.</span>
+			<span class="dossier-number">KvK 74892711</span>
+		</footer><script type="text/javascript" src="https://www.cryptocurrencychart.com/merged/javascript-2021-11-30-09-15-53.js"></script><script type="application/javascript">CryptoCurrencyChart.settings = {"chartUrl":"https:\/\/www.cryptocurrencychart.com\/chart-data","slider":{"min":1230940800000,"max":1641168000000,"startDate":1610064000000,"endDate":1641168000000},"customChartUrl":"https:\/\/www.cryptocurrencychart.com\/chart","compactCoinListUrl":"https:\/\/www.cryptocurrencychart.com\/live-prices","pastCompactCoinListUrl":"https:\/\/www.cryptocurrencychart.com\/past-prices","coinSearchUrl":"https:\/\/www.cryptocurrencychart.com\/coin\/search\/","csvFileUrl":"","spreadsheetUrl":"","coinLinkSearchUrl":"https:\/\/www.cryptocurrencychart.com\/coin\/link-search\/","isRelativeDate":false,"relativeStart":false,"relativeEnd":false,"exchangeRates":{"JPY":"115.11566307","BGN":"1.72682323","CZK":"21.94773088","DKK":"6.56577785","GBP":"0.74190358","HUF":"325.96680204","PLN":"4.05871446","RON":"4.36959208","SEK":"9.05023838","CHF":"0.91214903","ISK":"130.31961857","NOK":"8.81935369","HRK":"6.63570545","RUB":"75.31379127","TRY":"13.45002648","AUD":"1.37868620","BRL":"5.57134027","CAD":"1.27079286","CNY":"6.35237506","HKD":"7.79913473","IDR":"14215.45117428","ILS":"3.10427335","INR":"74.36800282","KRW":"1188.75154511","MXN":"20.43422214","MYR":"4.16598975","NZD":"1.46380010","PHP":"51.00035316","SGD":"1.34901995","THB":"33.24474660","ZAR":"15.94781917","EUR":"0.88292424","AED":"4.72316059","AFN":"132.92276619","ALL":"136.70374063","AMD":"615.30663136","ANG":"2.30945068","AOA":"708.01883906","ARS":"132.04611454","AWG":"2.31466970","AZN":"2.18428252","BAM":"2.21419109","BBD":"2.58752323","BDT":"109.85223198","BHD":"0.48483661","BIF":"2556.11863931","BMD":"1.28592799","BND":"1.72988340","BOB":"8.83613859","BSD":"1.28145648","BTC":"0.00002732","BTN":"95.28643195","BWP":"15.06695741","BYN":"3.27685757","BYR":"25204.18045659","BZD":"2.58322162","CDF":"2575.06751526","CLF":"0.03970555","CLP":"1095.61007908","COP":"5227.71994609","CRC":"822.63366311","CUC":"1.28592799","CUP":"34.07708098","CVE":"124.83079563","DJF":"228.14040628","DOP":"73.31128617","DZD":"178.58064706","EGP":"20.20687516","ERN":"19.28901385","ETB":"63.49309163","FJD":"2.72333670","FKP":"0.97007643","GEL":"3.97991336","GGP":"0.97007643","GHS":"7.92525297","GIP":"0.97007643","GMD":"67.83280256","GNF":"11846.64832238","GTQ":"9.89012256","GYD":"267.99025886","HNL":"31.42963414","HTG":"128.50275392","IMP":"0.97007643","IQD":"1870.38453204","IRR":"54362.58876839","JEP":"0.97007643","JMD":"197.29782024","JOD":"0.91169882","KES":"145.50247284","KGS":"109.04210359","KHR":"5218.52098588","KMF":"559.21775819","KPW":"1157.33471775","KWD":"0.38898014","KYD":"1.06790815","KZT":"557.46773942","LAK":"14321.49363116","LBP":"1937.69908403","LKR":"259.98915566","LRD":"186.62019070","LSL":"20.51095787","LTL":"3.79700978","LVL":"0.77784476","LYD":"5.88960381","MAD":"11.90537020","MDL":"22.80532345","MGA":"5088.61447846","MKD":"69.89796955","MMK":"2278.40906868","MNT":"3675.67564376","MOP":"10.29360225","MRO":"459.07592327","MUR":"56.06890203","MVR":"19.79458384","MWK":"1046.17189994","MZN":"82.08070556","NAD":"20.51060790","NGN":"526.70269004","NIO":"45.37322564","NPR":"152.44912204","OMR":"0.49512175","PAB":"1.28153463","PEN":"5.11425303","PGK":"4.50064206","PKR":"226.17495680","PYG":"8816.89310629","QAR":"4.68204947","RSD":"132.93998058","RWF":"1329.31822012","SAR":"4.82775846","SBD":"10.40819759","SCR":"16.99736651","SDG":"562.58958541","SHP":"1.77123802","SLL":"14473.11459949","SOS":"750.98150003","SRD":"26.75756627","STD":"26616.10451114","SVC":"11.21343201","SYP":"3230.88375002","SZL":"20.43458326","TJS":"14.48055376","TMT":"4.51360580","TND":"3.69807038","TOP":"2.92368684","TTD":"8.70458937","TWD":"35.53276645","TZS":"2966.63477137","UAH":"34.96099713","UGX":"4542.99641023","UYU":"57.17548167","UZS":"13865.66565811","VEF":"274970179128.48632812","VND":"29389.87471124","VUV":"145.63470956","WST":"3.34363113","XAF":"742.56190340","XAG":"0.05527314","XAU":"0.00070447","XCD":"3.47528343","XDR":"0.91558477","XOF":"742.60766497","XPF":"136.11576493","YER":"321.80301716","ZMK":"11574.88912975","ZMW":"21.35023826","ZWL":"414.06815480"},"coins":[],"isLoggedIn":false};</script></body></html>
